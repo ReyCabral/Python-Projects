@@ -15,3 +15,4 @@ def findFiles(directoryName, extension):
 
 for file in findFiles(directoryName,extension):
     print(file)
+
