@@ -22,12 +22,31 @@ print("4.Divide")
 
 while True:
 
+    userChoiceNum1 = 0
+    userChoiceNum2 = 0
     userChoiceOperation = input("Enter your choice (1, 2, 3 or 4): ")
-    
+
     if userChoiceOperation in ('1', '2', '3', '4'):
 
-        userChoiceNum1 = float(input("Enter first number: "))
-        userChoiceNum2 = float(input("Enter second number: "))
+
+        while True:
+            try:
+                userChoiceNum1 = float(input("Enter first number: "))      
+            except ValueError:
+                print("The program is expecting a numerical value")
+                continue
+            else:
+                break 
+
+        while True:
+            try:
+                userChoiceNum2 = float(input("Enter second number: "))      
+            except ValueError:
+                print("The program is expecting a numerical value")
+                continue
+            else:
+                break 
+        
 
         if userChoiceOperation == '1':
             print(userChoiceNum1, "+", userChoiceNum2, "=", "{:.2f}".format(add(userChoiceNum1, userChoiceNum2)))
@@ -48,4 +67,8 @@ while True:
     else:   
 
         print("Invalid Input") 
+        
+
+
+
 
