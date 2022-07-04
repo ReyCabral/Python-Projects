@@ -23,7 +23,8 @@ print("4.Divide")
 while True:
 
     userChoiceOperation = input("Enter your choice (1, 2, 3 or 4): ")
-    if int(userChoiceOperation) < 5:
+    
+    if userChoiceOperation in ('1', '2', '3', '4'):
 
         userChoiceNum1 = float(input("Enter first number: "))
         userChoiceNum2 = float(input("Enter second number: "))
